@@ -1,7 +1,7 @@
 name:                rhelsearch
 version:             0.1.0.0
 synopsis:            A small CLI tool to search for RHEL packages
--- description:         
+-- description:
 homepage:            https://github.com/relrod/rhelsearch
 license:             BSD2
 license-file:        LICENSE
@@ -10,16 +10,21 @@ maintainer:          relrod@redhat.com
 copyright:           (c) 2015 Red Hat, Inc.
 category:            System
 build-type:          Simple
--- extra-source-files:  
+-- extra-source-files:
 cabal-version:       >=1.10
 
 executable rhelsearch
   main-is:             Main.hs
-  -- other-modules:       
-  -- other-extensions:    
+  -- other-modules:
+  -- other-extensions:
   build-depends:       base >= 4 && < 5
+                     , aeson
+                     , bytestring
                      , wreq
                      , lens
                      , lens-aeson
+                     , time
+                     , friendly-time
+                     , directory
   hs-source-dirs:      src
   default-language:    Haskell2010
