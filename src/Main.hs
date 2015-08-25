@@ -44,6 +44,7 @@ toVersionError :: String -> RHELVersion
 toVersionError ver =
   let elver = strToRhel ver
   in fromMaybe (error "Invalid version specified") elver
+{-# INLINE toVersionError #-}
 
 data PkgResults = PkgResults {
     responseArches   :: [T.Text]
